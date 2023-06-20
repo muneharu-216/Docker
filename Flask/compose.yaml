@@ -1,0 +1,10 @@
+services:
+  web:
+  #Dockerfleをもとにコンテナを作成したい場合はbuild。Dockerfileまでのパスを記述する。
+    build:  .
+    environment:
+      FLASK_ENV: development
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./src:/usr/src/app
